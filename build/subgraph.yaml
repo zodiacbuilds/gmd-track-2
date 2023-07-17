@@ -1,6 +1,6 @@
 specVersion: 0.0.5
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: GMDvault
@@ -17,11 +17,11 @@ dataSources:
         - OwnershipTransferred
       abis:
         - name: GMDvault
-          file: ./abis/GMDvault.json
+          file: GMDvault/abis/GMDvault.json
       eventHandlers:
         - event: OwnershipTransferred(indexed address,indexed address)
           handler: handleOwnershipTransferred
-      file: ./src/gm-dvault.ts
+      file: GMDvault/GMDvault.wasm
   - kind: ethereum
     name: gmdUSDC
     network: arbitrum-one
@@ -38,15 +38,15 @@ dataSources:
         - Transfer
       abis:
         - name: gmdUSDC
-          file: ./abis/gmdUSDC.json
+          file: gmdUSDC/abis/gmdUSDC.json
       eventHandlers:
         - event: Approval(indexed address,indexed address,uint256)
           handler: handleApproval
         - event: OwnershipTransferred(indexed address,indexed address)
           handler: handleOwnershipTransferred
         - event: Transfers(indexed address,indexed address,uint256)
-          handler: handleTransfers
-      file: ./src/gmd-usdc.ts
+          handler: handleTransfer
+      file: gmdUSDC/gmdUSDC.wasm
   - kind: ethereum
     name: gmdUSDT
     network: arbitrum-one
@@ -60,18 +60,18 @@ dataSources:
       entities:
         - gmdUSDTApproval
         - gmdUSDTOwnershipTransferred
-        - gmdUSDTTransfer
+        - gmdUSDTTransfers
       abis:
         - name: gmdUSDT
-          file: ./abis/gmdUSDT.json
+          file: gmdUSDT/abis/gmdUSDT.json
       eventHandlers:
         - event: Approval(indexed address,indexed address,uint256)
           handler: handleApproval
         - event: OwnershipTransferred(indexed address,indexed address)
           handler: handleOwnershipTransferred
         - event: Transfers(indexed address,indexed address,uint256)
-          handler: handleTransfers
-      file: ./src/gmd-usdt.ts
+          handler: handleTransfer
+      file: gmdUSDT/gmdUSDT.wasm
   - kind: ethereum
     name: gmdETH
     network: arbitrum-one
@@ -88,15 +88,15 @@ dataSources:
         - gmdETHTransfers
       abis:
         - name: gmdETH
-          file: ./abis/gmdETH.json
+          file: gmdETH/abis/gmdETH.json
       eventHandlers:
         - event: Approval(indexed address,indexed address,uint256)
           handler: handleApproval
         - event: OwnershipTransferred(indexed address,indexed address)
           handler: handleOwnershipTransferred
         - event: Transfers(indexed address,indexed address,uint256)
-          handler: handleTransfers
-      file: ./src/gmd-eth.ts
+          handler: handleTransfer
+      file: gmdETH/gmdETH.wasm
   - kind: ethereum
     name: gmdBTC
     network: arbitrum-one
@@ -110,10 +110,10 @@ dataSources:
       entities:
         - gmdBTCApproval
         - gmdBTCOwnershipTransferred
-        - gmdBTCTransfer
+        - gmdBTCTransfers
       abis:
         - name: gmdBTC
-          file: ./abis/gmdBTC.json
+          file: gmdBTC/abis/gmdBTC.json
       eventHandlers:
         - event: Approval(indexed address,indexed address,uint256)
           handler: handleApproval
@@ -121,4 +121,4 @@ dataSources:
           handler: handleOwnershipTransferred
         - event: Transfers(indexed address,indexed address,uint256)
           handler: handleTransfers
-      file: ./src/gmd-btc.ts
+      file: gmdBTC/gmdBTC.wasm

@@ -3,6 +3,18 @@
     "GMDvault": {
       "address": "0x8080B5cE6dfb49a6B86370d6982B3e2A86FBBb08",
       "startBlock": 43861156
+    },
+    "gmdUSDC": {
+      "address": "0x3DB4B7DA67dd5aF61Cb9b3C70501B1BdB24b2C22"
+    },
+    "gmdUSDT": {
+      "address": "0x34101Fe647ba02238256b5C5A58AeAa2e532A049"
+    },
+    "gmdETH": {
+      "address": "0x1E95A37Be8A17328fbf4b25b9ce3cE81e271BeB3"
+    },
+    "gmdBTC": {
+      "address": "0x147FF11D9B9Ae284c271B2fAaE7068f4CA9BB619"
     }
   }
 }
