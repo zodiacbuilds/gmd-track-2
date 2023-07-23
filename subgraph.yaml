@@ -36,6 +36,7 @@ dataSources:
         - Approval
         - gmdUSDCOwnershipTransferred
         - Transfer
+        - gmdUSDCTotalSupply
       abis:
         - name: gmdUSDC
           file: ./abis/gmdUSDC.json
@@ -46,6 +47,8 @@ dataSources:
           handler: handleOwnershipTransferred
         - event: Transfers(indexed address,indexed address,uint256)
           handler: handleTransfers
+        - event: gmdUSDCTotalSupply(uint256)
+          handler: handleTotalSupply
       file: ./src/gmd-usdc.ts
   - kind: ethereum
     name: gmdUSDT
@@ -61,6 +64,7 @@ dataSources:
         - gmdUSDTApproval
         - gmdUSDTOwnershipTransferred
         - gmdUSDTTransfer
+        - gmdUSDTTotalSupply
       abis:
         - name: gmdUSDT
           file: ./abis/gmdUSDT.json
@@ -71,6 +75,8 @@ dataSources:
           handler: handleOwnershipTransferred
         - event: Transfers(indexed address,indexed address,uint256)
           handler: handleTransfers
+        - event: TotalSupply(uint256)
+          handler: handleTotalSupply
       file: ./src/gmd-usdt.ts
   - kind: ethereum
     name: gmdETH
@@ -86,6 +92,7 @@ dataSources:
         - gmdETHApproval
         - gmdETHOwnershipTransferred
         - gmdETHTransfers
+        - gmdETHTotalSupply
       abis:
         - name: gmdETH
           file: ./abis/gmdETH.json
@@ -96,6 +103,8 @@ dataSources:
           handler: handleOwnershipTransferred
         - event: Transfers(indexed address,indexed address,uint256)
           handler: handleTransfers
+        - event: TotalSupply(uint256)
+          handler: handleTotalSupply
       file: ./src/gmd-eth.ts
   - kind: ethereum
     name: gmdBTC
@@ -111,6 +120,7 @@ dataSources:
         - gmdBTCApproval
         - gmdBTCOwnershipTransferred
         - gmdBTCTransfer
+        - gmdBTCTotalSupply
       abis:
         - name: gmdBTC
           file: ./abis/gmdBTC.json
@@ -121,4 +131,6 @@ dataSources:
           handler: handleOwnershipTransferred
         - event: Transfers(indexed address,indexed address,uint256)
           handler: handleTransfers
+        - event: TotalSupply(uint256)
+          handler: handleTotalSupply
       file: ./src/gmd-btc.ts

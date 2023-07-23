@@ -6,6 +6,7 @@ type OwnershipTransferred @entity(immutable: true) {
   blockTimestamp: BigInt!
   transactionHash: Bytes!
 }
+
 type Approval @entity(immutable: true) {
   id: Bytes!
   owner: Bytes! # address
@@ -14,6 +15,14 @@ type Approval @entity(immutable: true) {
   blockNumber: BigInt!
   blockTimestamp: BigInt!
   transactionHash: Bytes!
+}
+
+type gmdUSDCTotalSupply @entity(immutable: true) {
+id: Bytes!
+totalSupply: Bytes! # uint256
+blockNumber: BigInt!
+blockTimestamp: BigInt!
+transactionHash: Bytes!
 }
 
 type gmdUSDCOwnershipTransferred @entity(immutable: true) {
@@ -34,6 +43,7 @@ type Transfers @entity(immutable: true) {
   blockTimestamp: BigInt!
   transactionHash: Bytes!
 }
+
 type gmdUSDTApproval @entity(immutable: true) {
   id: Bytes!
   owner: Bytes! # address
@@ -62,6 +72,15 @@ type gmdUSDTTransfers @entity(immutable: true) {
   blockTimestamp: BigInt!
   transactionHash: Bytes!
 }
+
+type gmdUSDTTotalSupply @entity(immutable: true) {
+id: Bytes!
+totalSupply: Bytes! # uint256
+blockNumber: BigInt!
+blockTimestamp: BigInt!
+transactionHash: Bytes!
+}
+
 type gmdETHApproval @entity(immutable: true) {
   id: Bytes!
   owner: Bytes! # address
@@ -90,6 +109,15 @@ type gmdETHTransfers @entity(immutable: true) {
   blockTimestamp: BigInt!
   transactionHash: Bytes!
 }
+
+type gmdETHTotalSupply @entity(immutable: true) {
+id: Bytes!
+totalSupply: Bytes! # uint256
+blockNumber: BigInt!
+blockTimestamp: BigInt!
+transactionHash: Bytes!
+}
+
 type gmdBTCApproval @entity(immutable: true) {
   id: Bytes!
   owner: Bytes! # address
@@ -117,4 +145,12 @@ type gmdBTCTransfers @entity(immutable: true) {
   blockNumber: BigInt!
   blockTimestamp: BigInt!
   transactionHash: Bytes!
+}
+
+type gmdBTCTotalSupply @entity(immutable: true) {
+id: Bytes!
+totalSupply: Bytes! # uint256
+blockNumber: BigInt!
+blockTimestamp: BigInt!
+transactionHash: Bytes!
 }
