@@ -36,8 +36,8 @@ export function handleOwnershipTransferred(
   entity.save()
 }
 
-export function handleTransfers(event: TransferEvent): void {
-  let entity = new Transfers(
+export function handleTransfer(event: TransferEvent): void {
+  let entity = new Transfer(
     event.transaction.hash.concatI32(event.logIndex.toI32())
   )
   entity.from = event.params.from
