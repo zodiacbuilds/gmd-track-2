@@ -23,6 +23,7 @@ export const GMDUSDC_POOL = Address.fromString('0x3DB4B7DA67dd5aF61Cb9b3C70501B1
 export const GMDUSDT_POOL = Address.fromString('0x34101Fe647ba02238256b5C5A58AeAa2e532A049');
 export const GMDBTC_POOL = Address.fromString('0x147FF11D9B9Ae284c271B2fAaE7068f4CA9BB619');
 export const GMDETH_POOL = Address.fromString('0x1E95A37Be8A17328fbf4b25b9ce3cE81e271BeB3');
+export const ETH_ORACLE = Address.fromString('0x639fe6ab55c921f74e7fac1ee960c0b6293ba612');
 export const WETH_TOKEN = '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1';
 export const WETH_TOKEN_ADDRESS = Address.fromString('WETH_TOKEN');
 export const GMD_TOKEN = '0x4945970EfeEc98D393b4b979b9bE265A3aE28A8B';
