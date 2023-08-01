@@ -146,9 +146,17 @@ dataSources:
       apiVersion: 0.0.7
       language: wasm/assemblyscript
     entities:
-        -
+        - Burn
+        - Mint
+        - Swap
     abis:
         - name: UniswapV3Pool
     file: ./abis/UniswapV3Pool.json
     eventHandlers:
+        - event: Burn(indexed address,indexed address,uint256)
+          handler: handleBurn
+        - event: Mint(indexed address,indexed address,uint256)
+          handler: handleMint
+        - event: Swap(indexed address,indexed address,uint256)
+          handler: handleSwap
       file: ./src/uniswap-v-3-pool.ts

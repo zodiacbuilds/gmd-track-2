@@ -154,3 +154,36 @@ blockNumber: BigInt!
 blockTimestamp: BigInt!
 transactionHash: Bytes!
 }
+
+type UniswapV3PoolBurn @entity(immutable: true) {
+id: bytes!
+from: Bytes! # address
+to: Bytes! # address
+value: BigInt! # uint256
+blockNumber: BigInt!
+blockTimestamp: BigInt!
+transactionHash: Bytes!
+}
+
+type UniswapV3PoolMint @entity(immutable: true) {
+id: bytes!
+from: Bytes! # address
+to: Bytes! # address
+value: BigInt! # uint256
+blockNumber: BigInt!
+blockTimestamp: BigInt!
+transactionHash: Bytes!
+}
+
+type UniswapV3PoolSwap @entity(immutable: true) {
+  id: Bytes!
+  timestamp: BigInt!
+  from: Bytes!
+  to: Bytes
+  tokenIn: Token!
+  tokenOut: Token!
+  amountIn: BigDecimal!
+  amountOut: BigDecimal!
+  swapFeeProfitUSD: BigDecimal!
+  spotPrice: BigDecimal!
+}

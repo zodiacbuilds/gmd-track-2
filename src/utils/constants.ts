@@ -19,7 +19,13 @@ export const BIG_DECIMAL_MIN_1 = BigDecimal.fromString('-1');
 export const BIG_DECIMAL_YEAR = BigDecimal.fromString('31536000');
 export const ZERO_ADDRESS = Address.fromHexString('0x0000000000000000000000000000000000000000');
 
-export const GMDUSDC_POOL = Address.fromString('');
-export const GMDUSDT_POOL = Address.fromString('');
-export const GMDBTC_POOL = Address.fromString('');
-export const GMDETH_POOL = Address.fromString('');
+export const GMDUSDC_POOL = Address.fromString('0x3DB4B7DA67dd5aF61Cb9b3C70501B1BdB24b2C22');
+export const GMDUSDT_POOL = Address.fromString('0x34101Fe647ba02238256b5C5A58AeAa2e532A049');
+export const GMDBTC_POOL = Address.fromString('0x147FF11D9B9Ae284c271B2fAaE7068f4CA9BB619');
+export const GMDETH_POOL = Address.fromString('0x1E95A37Be8A17328fbf4b25b9ce3cE81e271BeB3');
+export const WETH_TOKEN = '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1';
+export const WETH_TOKEN_ADDRESS = Address.fromString('WETH_TOKEN');
+export const GMD_TOKEN = '0x4945970EfeEc98D393b4b979b9bE265A3aE28A8B';
+export const GMD_TOKEN_ADDRESS = Address.fromString('GMD_TOKEN');
+export const UNI_QUOTER_ADDRESS = Address.fromString('0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6');
+export const UNI_V3_POOL_ADDRESS = Address.fromString('0x0632742C132413Cd47438691D8064Ff9214aC216');
