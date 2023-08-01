@@ -134,3 +134,21 @@ dataSources:
         - event: TotalSupply(uint256)
           handler: handleTotalSupply
       file: ./src/gmd-btc.ts
+  - kind: ethereum
+    name: UniswapV3Pool
+    network: arbitrum-one
+    source:
+      address: "0x0632742C132413Cd47438691D8064Ff9214aC216"
+      abi: UniswapV3Pool
+      startBlock: 35119191
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+    entities:
+        -
+    abis:
+        - name: UniswapV3Pool
+    file: ./abis/UniswapV3Pool.json
+    eventHandlers:
+      file: ./src/uniswap-v-3-pool.ts

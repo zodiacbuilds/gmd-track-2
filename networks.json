@@ -15,6 +15,10 @@
     },
     "gmdBTC": {
       "address": "0x147FF11D9B9Ae284c271B2fAaE7068f4CA9BB619"
+    },
+    "UniswapV3Pool": {
+      "address": "0x0632742C132413Cd47438691D8064Ff9214aC216",
+      "startBlock": 35119191
     }
   }
 }
